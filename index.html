@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <title>Tic Tac Toe</title>
+        <link rel="stylesheet" type = "text/css" href = "style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="tictactoe-container">
+            <p data-record class="record noselect">X-0-0-0-O</p>
+            <div class="grid-container noselect">
+                <div data-spaces class="grid-item"><p></p></div>
+                <div data-spaces class="grid-item"><p></p></div>
+                <div data-spaces class="grid-item"><p></p></div>
+                <div data-spaces class="grid-item"><p></p></div>
+                <div data-spaces class="grid-item"><p></p></div>
+                <div data-spaces class="grid-item"><p></p></div>
+                <div data-spaces class="grid-item"><p></p></div>
+                <div data-spaces class="grid-item"><p></p></div>
+                <div data-spaces class="grid-item"><p></p></div>
+            </div>
+            <select data-select class="ai-select" onchange="updateDifficulty()">
+                <option value="easy">AI-1</option>
+                <option value="medium" selected="selected">AI-2</option>
+                <option value="unbeatable">AI-3</option>
+                <option value="friend">Friend</option>
+            </select>
+        </div>
+        <script src="script.js" defer></script>
+    </body>
+</html>

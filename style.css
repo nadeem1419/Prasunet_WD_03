@@ -1,0 +1,113 @@
+body {
+    background: linear-gradient(150deg, #ded6e2, #ede6b48f); }
+ 
+ .tictactoe-container {
+    background: linear-gradient(180deg, #665136, #09f0208f);
+     width: 77vh;
+     height: auto;
+     position: absolute;
+     left: 50%;
+     top: 20%;
+     transform: translate(-50%, -20%);
+ }
+ 
+ .grid-container {
+    background: linear-gradient(180deg, #121312, #0a245d8f);
+     display: inline-grid;
+     width: auto;
+     height: auto;
+     grid-gap: 1vh;
+     grid-template-columns: repeat(3, 25vh);
+     grid-template-rows: repeat(3, 25vh);
+ }
+ 
+ .grid-item {
+    background: linear-gradient(250deg, #1b0101, #f6f4ea8f);
+     color: #F0F7EE;
+     display: flex;
+     cursor: pointer;
+     justify-content: center;
+     align-items: center;
+     font-family: 'Varela Round', sans-serif;
+     font-weight: bold;
+     font-size: 25vh;
+ }
+ 
+ .record {
+     color: #F0F7EE;
+     font-weight: bold;
+     text-align: center;
+     font-family: 'Varela Round', sans-serif;
+     font-size: 10vh;
+     white-space: nowrap;
+     margin: 2vh auto;
+ }
+ 
+ .ai-select {
+     color: #53b139;
+     background-color: #353A47;
+     font-size: 3vh;
+     width: 40%;
+     height: 15%;
+     margin: 1vh 30%;
+ }
+ 
+ .win {
+     color: #ead308;
+     animation: shake 0.5s;
+     animation-iteration-count: 3;
+ }
+ 
+ .draw {
+     color: #FF312E;
+     animation: shake 0.5s;
+     animation-iteration-count: 6;
+ }
+ 
+ @keyframes shake {
+     0% { transform: translate(1px, 1px) rotate(0deg); }
+     10% { transform: translate(-1px, -2px) rotate(-1deg); }
+     20% { transform: translate(-3px, 0px) rotate(1deg); }
+     30% { transform: translate(3px, 2px) rotate(0deg); }
+     40% { transform: translate(1px, -1px) rotate(1deg); }
+     50% { transform: translate(-1px, 2px) rotate(-1deg); }
+     60% { transform: translate(-3px, 1px) rotate(0deg); }
+     70% { transform: translate(3px, 1px) rotate(-1deg); }
+     80% { transform: translate(-1px, -1px) rotate(1deg); }
+     90% { transform: translate(1px, 2px) rotate(0deg); }
+     100% { transform: translate(1px, -2px) rotate(-1deg); }
+ }
+ 
+ .noselect {
+     -webkit-touch-callout: none; /* iOS Safari */
+     -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+     -ms-user-select: none; /* Internet Explorer/Edge */
+     user-select: none; /* Non-prefixed version, currently
+        supported by Chrome, Edge, Opera and Firefox */
+ }
+ 
+ @media screen and (orientation:portrait) {
+     .tictactoe-container {
+         width: 77vw;
+     }
+ 
+     .grid-container {
+         grid-gap: 1vw;
+         grid-template-columns: repeat(3, 25vw);
+         grid-template-rows: repeat(3, 25vw);
+     }
+ 
+     .grid-item {
+         font-size: 25vw;
+     }
+     
+     .record {
+         font-size: 10vw;
+     }
+ 
+     .ai-select {
+         font-size: 3vw;
+     }
+ }
